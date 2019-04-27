@@ -1,0 +1,19 @@
+{
+  "Services": {
+    "ip2location-mysql": {
+      "Image": "mysql/mysql-server@sha256:8dd16a45d0e3e789f2006b608abb1bb69f1a8632a338eef89aec8d6fccda7793", 
+      "Networks": []
+    }, 
+    "ip2location-service": {
+      "Image": "java@sha256:c1ff613e8ba25833d2e1940da0940c3824f03f802c449f3d1815a66b7f8c0e9d", 
+      "Networks": [], 
+      "Ports": [
+        {
+          "Port": 8080, 
+          "Protocol": "tcp"
+        }
+      ]
+    }
+  }, 
+  "Version": "0.1"
+}

@@ -1,0 +1,17 @@
+version: '3'
+services:
+  ip2location-service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ip2location_ws
+    expose:
+    - "8080"
+    links:
+    - "ip2location-mysql"
+
+  ip2location-mysql:
+    build:
+      context: .
+      dockerfile: Dockerfile_db
+    container_name: ip2location_db
