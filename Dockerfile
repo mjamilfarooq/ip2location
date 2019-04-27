@@ -1,5 +1,5 @@
-From maven
+From java
 ADD . /workingdir
 WORKDIR /workingdir
-ENTRYPOINT ["mvn","spring-boot:run"]
+ENTRYPOINT ["java","-jar","target/ip2location-0.0.1-SNAPSHOT.jar"]
 

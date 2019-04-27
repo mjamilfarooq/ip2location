@@ -1,6 +1,0 @@
-From mysql/mysql-server
-ENV MYSQL_ROOT_PASSWORD=mypassword
-ENV MYSQL_ROOT_HOST=%
-ENV MYSQL_DATABASE=ip2location
-
-

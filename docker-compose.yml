@@ -9,9 +9,22 @@ services:
     - "8080"
     links:
     - "ip2location-mysql"
+    depends_on:
+      - ip2location-mysql
 
   ip2location-mysql:
-    build:
-      context: .
-      dockerfile: Dockerfile_db
+    image: "mysql/mysql-server:5.7"
+    environment:
+    - MYSQL_ROOT_PASSWORD=mypassword
+    - MYSQL_ROOT_HOST=%
+    - MYSQL_DATABASE=ip2location
+    expose:
+    - "3360"
+    - "33060"
     container_name: ip2location_db
+    healthcheck:
+      test: ["CMD", "./healthcheck.sh"]
+      interval: 60s
+      timeout: 10s
+      retries: 5
+
