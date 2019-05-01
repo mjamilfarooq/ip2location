@@ -11,7 +11,7 @@ import org.springframework.data.repository.query.Param;
 public interface GeoLocationIPv4Repository extends JpaRepository<GeoLocationIPv4, Ipv4CompositeKey> {
 
 
-//    @Query(value = "SELECT geo FROM GeoLocationIPv4 geo WHERE geo.key.ipFrom <= :ip AND geo.key.ipTo >= :ip")
-    @Query(value = "SELECT * FROM ip2location_db3 WHERE ip_from <= :ip AND ip_to >= :ip", nativeQuery = true)
+    @Query(value = "SELECT geo FROM GeoLocationIPv4 geo WHERE geo.key.ipFrom <= :ip AND geo.key.ipTo >= :ip")
+//    @Query(value = "SELECT * FROM ip2location_db3 WHERE ip_from <= :ip AND ip_to >= :ip", nativeQuery = true)
     GeoLocationIPv4 findIpRange(@Param("ip") Long ip);
 }

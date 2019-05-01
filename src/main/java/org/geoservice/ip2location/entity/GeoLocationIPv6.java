@@ -6,7 +6,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "ip2location_db3_ipv6")
+@Table(name = "ipv6")
 public class GeoLocationIPv6 {
 
     @EmbeddedId

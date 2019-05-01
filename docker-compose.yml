@@ -17,7 +17,10 @@ services:
     environment:
     - MYSQL_ROOT_PASSWORD=mypassword
     - MYSQL_ROOT_HOST=%
-    - MYSQL_DATABASE=ip2location
+#    - MYSQL_DATABASE=ip2location
+    volumes:
+      - ./docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
+      - ./db:/var/lib/mysql
     expose:
     - "3360"
     - "33060"

@@ -7,7 +7,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "ip2location_db3")
+@Table(name = "ipv4")
 public class GeoLocationIPv4 {
 
     @EmbeddedId

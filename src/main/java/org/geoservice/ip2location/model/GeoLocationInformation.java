@@ -8,7 +8,6 @@ class GeoLocationInformation implements Serializable {
     private String countryName;
     private String regionName;
     private String cityName;
-    private String dataCenterRegion;
 
     public GeoLocationInformation() {
 
@@ -46,14 +45,6 @@ class GeoLocationInformation implements Serializable {
         this.cityName = cityName;
     }
 
-    public String getDataCenterRegion() {
-        return dataCenterRegion;
-    }
-
-    public void setDataCenterRegion(String dataCenterRegion) {
-        this.dataCenterRegion = dataCenterRegion;
-    }
-
     @Override
     public String toString() {
         return "GeoLocationInformation{" +
@@ -61,7 +52,6 @@ class GeoLocationInformation implements Serializable {
                 ", countryName='" + countryName + '\'' +
                 ", regionName='" + regionName + '\'' +
                 ", cityName='" + cityName + '\'' +
-                ", dataCenterRegion='" + dataCenterRegion + '\'' +
                 '}';
     }
 }

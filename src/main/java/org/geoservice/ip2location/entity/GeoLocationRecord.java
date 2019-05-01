@@ -8,17 +8,15 @@ public class GeoLocationRecord {
     @Column(name = "country_code")
     private String countryCode;
 
-    @Column(name = "country_name")
+    @Column(name = "country")
     private String countryName;
 
-    @Column(name = "region_name")
+    @Column(name = "state")
     private String regionName;
 
-    @Column(name = "city_name")
+    @Column(name = "city")
     private String cityName;
 
-    @Column(name = "datacenter_region")
-    private String dataCenterRegion;
 
     public GeoLocationRecord ()
     {
@@ -57,14 +55,6 @@ public class GeoLocationRecord {
         this.cityName = cityName;
     }
 
-    public String getDataCenterRegion() {
-        return dataCenterRegion;
-    }
-
-    public void setDataCenterRegion(String dataCenterRegion) {
-        this.dataCenterRegion = dataCenterRegion;
-    }
-
     @Override
     public String toString() {
         return "GeoLocationRecord{" +
@@ -72,7 +62,6 @@ public class GeoLocationRecord {
                 ", countryName='" + countryName + '\'' +
                 ", regionName='" + regionName + '\'' +
                 ", cityName='" + cityName + '\'' +
-                ", dataCenterRegion='" + dataCenterRegion + '\'' +
                 '}';
     }
 }
